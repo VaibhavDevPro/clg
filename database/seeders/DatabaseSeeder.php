@@ -18,5 +18,6 @@ class DatabaseSeeder extends Seeder
             'email' => 'admin@admin.com',
             'password' => bcrypt('Admin@123'), // Hash the password
         ]);
+        $this->call(FoodCategorySeeder::class);
     }
 }
