@@ -14,9 +14,11 @@ class CreateFoodCategoriesTable extends Migration
     public function up()
     {
         Schema::create('food_categories', function (Blueprint $table) {
-            $table->id(); // Auto-incrementing ID
-            $table->string('name'); // Name of the food category
-            $table->timestamps(); // Created at and updated at timestamps
+            $table->id();
+            $table->string('name');
+            $table->string('created_by')->default('Admin'); // Default value as 'Admin'
+            $table->timestamp('created_on')->nullable();
+            $table->timestamps(); // created_at and updated_at
         });
     }
 

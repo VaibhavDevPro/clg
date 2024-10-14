@@ -9,13 +9,25 @@ class FoodCategory extends Model
 {
     use HasFactory;
 
-    // Specify the table associated with the model if it's not the plural form of the model name
-    protected $table = 'food_categories';
-
-    // Define the fillable attributes for mass assignment
+    // Define fillable attributes for mass assignment
     protected $fillable = [
         'name',
+        'created_on',
+        'created_by',
+        // add other fields here as needed
     ];
 
-    // Optionally, define relationships, accessors, mutators, etc.
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::creating(function ($model) {
+            if (!$model->created_by) {
+                $model->created_by = 'Admin'; // Default to Admin if not provided
+            }
+            if (!$model->created_on) {
+                $model->created_on = now(); // Set current timestamp if not provided
+            }
+        });
+    }
 }

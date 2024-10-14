@@ -22,8 +22,8 @@ class FoodCategoryDataTable extends DataTable
         return (new EloquentDataTable($query))
             ->addColumn('action', function ($data) {
                 $string = '<div class="d-flex align-items-center gap-2">';
-                $string .= '<a href="' . route('food-categories.edit', $data->id) . '" data-bs-toggle="modal" data-bs-target="#global_modal" data-bs-whatever="Edit Food Category" class="btn box-32 btn-clean btn-icon" title="Edit details"><span class="material-symbols-outlined text-color-secondary fs-1">edit</span></a>';
-                $string .= '<a href="javascript:void(0)" data-url="' . route('food-categories.destroy', $data->id) . '" class="btn box-32 btn-clean btn-icon delete-item" title="Delete Food Category"><span class="material-symbols-outlined text-color-secondary fs-1">delete</span></a>';
+                $string .= '<a href="' . route('food-categories.edit', $data->id) . '" data-bs-toggle="modal" data-bs-target="#global_modal" data-bs-whatever="Edit Food Category" class="btn box-32 bg-light btn-clean btn-icon" title="Edit details"><span class="material-symbols-outlined text-color-secondary fs-1">edit</span></a>';
+                $string .= '<a href="javascript:void(0)" data-url="' . route('food-categories.destroy', $data->id) . '" class="btn bg-light box-32 btn-clean btn-icon delete-item" title="Delete Food Category"><span class="material-symbols-outlined text-color-secondary fs-1 text-danger">delete</span></a>';
                 $string .= '</div>';
                 return $string;
             })
@@ -37,7 +37,8 @@ class FoodCategoryDataTable extends DataTable
      */
     public function query(FoodCategory $model): QueryBuilder
     {
-        return $model->newQuery();
+        return $model->newQuery()
+            ->select('id', 'name', 'created_on', 'created_by'); // Ensure these columns are selected
     }
 
     /**
@@ -64,11 +65,14 @@ class FoodCategoryDataTable extends DataTable
     /**
      * Get the dataTable columns definition.
      */
+
     public function getColumns(): array
     {
         return [
             Column::make('DT_RowIndex')->title('S.No'),
             Column::make('name')->title('Food Category'),
+            Column::make('created_on')->title('Created On'), // Match the correct column name
+            Column::make('created_by')->title('Created By'),   // Match the correct column name
             Column::computed('action')
                 ->exportable(false)
                 ->printable(false)

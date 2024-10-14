@@ -2,71 +2,73 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\FoodCategory; // Make sure to import the FoodCategory model
+use App\Models\FoodCategory; // Import the model
+use App\DataTables\FoodCategoryDataTable; // Import the DataTable
 use Illuminate\Http\Request;
-use App\DataTables\FoodCategoryDataTable;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\View\View;
 
 class FoodCategoryController extends Controller
 {
     // Display a listing of the resource
-    public function index(FoodCategoryDataTable $datatable)
+    public function index(FoodCategoryDataTable $dataTable)
     {
-        $categories = FoodCategory::all(); // Fetch all categories
-        // return view('food-categories.index', compact('categories')); // Return the view
-        // return $dataTable->render(''); // Make sure the view exists
-
         $data['title'] = 'Food Category';
         addVendors(['datatable', 'tinyMCE', 'jquery-validate']);
-        return $datatable->render('food-categories.index', $data);
+        return $dataTable->render('admin.food-categories.index', $data); // Use $dataTable instead of $datatable
     }
 
     // Show the form for creating a new resource
     public function create()
     {
-        return view('food-categories.create'); // Return the create view
-    }
-
-    // Store a newly created resource in storage
-    public function store(Request $request)
-    {
-        $request->validate([
-            'name' => 'required|string|max:255', // Validate the input
-        ]);
-
-        FoodCategory::create($request->only('name')); // Create the category
-
-        return redirect()->route('food-categories.index')->with('success', 'Category created successfully.'); // Redirect with success message
-    }
-
-    // Display the specified resource
-    public function show(FoodCategory $foodCategory)
-    {
-        return view('food-categories.show', compact('foodCategory')); // Return the show view
+        $html = view('admin.food-categories.create')->render();
+        return response()->json(['success' => 200, 'html' => $html]);
     }
 
     // Show the form for editing the specified resource
     public function edit(FoodCategory $foodCategory)
     {
-        return view('food-categories.edit', compact('foodCategory')); // Return the edit view
+        // Pass the foodCategory to the view
+        $html = view('admin.food-categories.edit', compact('foodCategory'))->render();
+        return response()->json(['success' => 200, 'html' => $html]);
     }
 
-    // Update the specified resource in storage
+    // Store a new food category
+    public function store(Request $request): RedirectResponse
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'created_on' => 'required|date',
+            'created_by' => 'required|string|max:255',
+        ]);
+
+        // Create a new food category
+        FoodCategory::create($request->only('name', 'created_on', 'created_by'));
+
+        return redirect()->route('food-categories.index')->with('success', 'Category created successfully.');
+    }
+
+    // Update an existing food category
     public function update(Request $request, FoodCategory $foodCategory)
     {
         $request->validate([
-            'name' => 'required|string|max:255', // Validate the input
+            'name' => 'required|string|max:255',
+            'created_on' => 'required|date',
+            'created_by' => 'required|string|max:255',
         ]);
 
-        $foodCategory->update($request->only('name')); // Update the category
+        // Update the food category
+        $foodCategory->update($request->only('name', 'created_on', 'created_by'));
 
-        return redirect()->route('food-categories.index')->with('success', 'Category updated successfully.'); // Redirect with success message
+        return redirect()->route('food-categories.index')->with('success', 'Category updated successfully.');
     }
 
     // Remove the specified resource from storage
     public function destroy(FoodCategory $foodCategory)
     {
-        $foodCategory->delete(); // Delete the category
-
-        return redirect()->route('food-categories.index')->with('success', 'Category deleted successfully.'); // Redirect with success message
+        $foodCategory->delete();
+        // return response()->json(["status" => 200, "message" => "Category deleted successfully."]);
+        return redirect()->route('food-categories.index')->with('success', 'Category deleted successfully.');
     }
+
 }

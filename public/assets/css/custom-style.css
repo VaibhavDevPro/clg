@@ -1,0 +1,29 @@
+table thead tr th{
+    border-bottom: 1px solid #7c7c7c !important;
+    background: #f1f1f1 !important;
+    color: #7c7c7c !important;
+    padding: 1.5rem 0.5rem !important;
+    font-size: 12px !important;
+}
+table tbody tr td{
+    border-bottom: 1px dashed #efefef !important
+}
+
+.table:not(.table-bordered) td:first-child, .table:not(.table-bordered) th:first-child, .table:not(.table-bordered) tr:first-child{
+    padding-left: 24px;
+}
+
+.box-32{
+    width: 32px;
+    height: 32px;
+}
+
+.alert {
+    position: fixed; /* or absolute */
+    top: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    z-index: 1000; /* Ensure it's on top */
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: opacity 0.5s ease;
+}
