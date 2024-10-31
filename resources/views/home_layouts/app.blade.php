@@ -12,7 +12,10 @@
     {{-- <link href="/dist/main.css" rel="stylesheet"> --}}
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/flatepikr.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/select2.min.css') }}">
+
     @vite('resources/css/app.css')
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
@@ -23,10 +26,14 @@
 </head>
 
 <body>
-        @yield('content')
+    @yield('content')
 
     @stack('home_scripts')
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset('assets/js/jquery-3.7.0.min.js')}}"></script>
+    <script src="{{asset('assets/js/select2.min.js  ')}}"></script>
+    <script src="{{asset('assets/js/flatpickr.js')}}"></script>
+    <script src="{{asset('assets/js/front.js')}}"></script>
 </body>
 
 </html>

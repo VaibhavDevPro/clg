@@ -101,13 +101,13 @@
 <section class="pt-[120px]" data-aos="fade-up">
     <div class="container mx-auto">
         <div class="flex items-center justify-between">
-            <h2 class="text-color font-bold uppercase text-[60px]">our Categories</h2>
+            <h2 class="text-color font-bold uppercase text-6xl">our Categories</h2>
             <a class="btn btn-primary-blank font-hanken text-color-secondary text-xl">
                 See More
             </a>
         </div>
         <div class="row mt-8">
-            <div class="col-md-3 col-12">
+            <div class="col-md-3 col-12" data-aos="fade-bottom">
                 <div class="rounded flex gap-3 iconic-box style-four mb-0 wow fadeInUp">
                     <div class="box-36 w-[36px] h-[36px] flex items-center justify-center rounded-full bg-[#fff]">
                         <span class="material-symbols-outlined">
@@ -121,7 +121,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-12">
+            <div class="col-md-3 col-12" data-aos="fade-top">
                 <div class="rounded flex gap-3 iconic-box style-four mb-0 wow fadeInUp">
                     <div class="box-36 w-[36px] h-[36px] flex items-center justify-center rounded-full bg-[#fff]">
                         <span class="material-symbols-outlined">
@@ -135,7 +135,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-12">
+            <div class="col-md-3 col-12" data-aos="fade-bottom">
                 <div class="rounded flex gap-3 iconic-box style-four mb-0 wow fadeInUp">
                     <div class="box-36 w-[36px] h-[36px] flex items-center justify-center rounded-full bg-[#fff]">
                         <span class="material-symbols-outlined">
@@ -149,7 +149,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-12">
+            <div class="col-md-3 col-12" data-aos="fade-top">
                 <div class="rounded flex gap-3 iconic-box style-four mb-0 wow fadeInUp">
                     <div class="box-36 w-[36px] h-[36px] flex items-center justify-center rounded-full bg-[#fff]">
                         <span class="material-symbols-outlined">
@@ -179,7 +179,7 @@
                     </span>
                     About Us
                 </p>
-                <p class="text-color text-[60px] font-[800] uppercase leading-[60px] mb-4">
+                <p class="text-color text-6xl font-[800] uppercase leading-[60px] mb-4">
                     Delicia's about fresh flavorful dining
                 </p>
                 <p class="text-color-secondary font-hanken">
@@ -212,15 +212,15 @@
         </div>
 
     </div>
-</section>''
+</section>
 
-<section class="pt-[120px] pb-[120px]" data-aos="fade-top">
+<section class="pt-[120px]" data-aos="fade-top">
     <div class="offer">
         <div class="container mx-auto">
             <div class="flex items-center">
                 <div class="col-md-6">
                     <div class="content flex flex-col gap-2 aos-init aos-animate"">
-                        <p class="font-semibold text-orange flex gap-1 items-center">
+                        <p class=" font-semibold text-orange flex gap-1 items-center">
                         <span class="material-symbols-outlined">
                             room_service
                         </span>
@@ -262,6 +262,295 @@
                 <div class="col-md-6">
                     <img src="{{asset('assets/media/home/offer-img1.png')}}" class="img-fluid" alt="">
                     <img src="{{asset('assets/media/home/bn-img-6.png')}}" class="offer-absolute" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="pt-[120px]" data-aos="fade-bottom">
+    <div class="container mx-auto">
+        <div class="flex flex-col items-center gap-2 aos-init aos-animate" data-aos="fade-bottom">
+            <p class="text-orange flex gap-1 items-center">
+                <span class="material-symbols-outlined">
+                    room_service
+                </span>
+                Why choose us
+            </p>
+            <p class="text-color text-6xl font-[800] uppercase leading-[60px] mb-4">
+                Why We’re Your Best Choice
+            </p>
+
+
+            <div class="row items-center mt-8">
+                <div class="col-md-3 col-12" data-aos="fade-top">
+                    <div class="best-choose-box">
+                        <span class="material-symbols-outlined choose-icon">
+                            fastfood
+                        </span>
+                        <div class="flex flex-col gap-1">
+                            <h3 class="choose-title text-center font-bold text-3xl">Hygienic Food</h3>
+                            <p class="choose-para text-center font-normal font-hanken">We are passionate about serving
+                                fresh, flavorful</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-12" data-aos="fade-bottom">
+                    <div class="best-choose-box">
+                        <span class="material-symbols-outlined choose-icon">
+                            local_florist
+                        </span>
+                        <div class="flex flex-col gap-1">
+                            <h3 class="choose-title text-center font-bold text-3xl">Fresh Environment</h3>
+                            <p class="choose-para text-center font-normal font-hanken">We are passionate about serving
+                                fresh, flavorful</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-12" data-aos="fade-top">
+                    <div class="best-choose-box">
+                        <span class="material-symbols-outlined choose-icon">
+                            skillet
+                        </span>
+                        <div class="flex flex-col gap-1">
+                            <h3 class="choose-title text-center font-bold text-3xl">Skilled Chefs</h3>
+                            <p class="choose-para text-center font-normal font-hanken">We are passionate about serving
+                                fresh, flavorful</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-12" data-aos="fade-bottom">
+                    <div class="best-choose-box">
+                        <span class="material-symbols-outlined choose-icon">
+                            cake
+                        </span>
+                        <div class="flex flex-col gap-1">
+                            <h3 class="choose-title text-center font-bold text-3xl">Event & Party</h3>
+                            <p class="choose-para text-center font-normal font-hanken">We are passionate about serving
+                                fresh, flavorful</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="pt-[120px]" data-aos="fade-top">
+    <div class="offer">
+        <div class="container mx-auto">
+            <div class="flex items-center">
+                <div class="col-md-6 col-12" data-aos="fade-top">
+                    <div class="content flex flex-col gap-2 aos-init aos-animate"">
+                        <p class=" font-semibold text-orange flex gap-1 items-center">
+                        <span class="material-symbols-outlined">
+                            room_service
+                        </span>
+                        Reservation
+                        </p>
+
+                        <p class="text-white text-7xl font-[800] uppercase leading-[72px] mb-4">
+                            Need reservation? booking your table now
+                        </p>
+
+                        <p class=" font-semibold text-orange flex gap-1 items-center">
+                            Order online
+                        </p>
+
+                        <a href="tel:7054913163" class="btn btn-secondary w-fc mt-8 font-hanken has-icon-btn">
+                            <span class="material-symbols-outlined">
+                                phone_in_talk
+                            </span>
+                            7054913163
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-12"  data-aos="fade-bottom">
+                    <form action="">
+                        <div class="call-form">
+                            <h4 class="text-white font-semibold text-2xl text-center">Create An Booking Table</h4>
+                            <div class="row mt-6">
+                                <div class="col-md-6 col-12 position-relative">
+                                    <input type="text" class="form-control has-icon-left" placeholder="Enter Your Name">
+                                    <span class="material-symbols-outlined call-from-icon">
+                                        person
+                                    </span>
+                                </div>
+                                <div class="col-md-6 col-12 mt-4 mt-md-0 position-relative">
+                                    <input type="text" class="form-control has-icon-left"
+                                        placeholder="Enter Your Email">
+                                    <span class="material-symbols-outlined call-from-icon">
+                                        mail
+                                    </span>
+                                </div>
+                                <div class="col-md-6 col-12 mt-4  position-relative">
+                                    <input type="text" class="form-control has-icon-left"
+                                        placeholder="Enter Your Phone">
+                                    <span class="material-symbols-outlined call-from-icon">
+                                        call
+                                    </span>
+                                </div>
+                                <div class="col-md-6 col-12 mt-4  position-relative">
+                                    <input type="text" class="form-control from-today has-icon-left"
+                                        placeholder="Date of Reservation">
+                                    <span class="material-symbols-outlined call-from-icon">
+                                        concierge
+                                    </span>
+                                </div>
+                                <div class="col-md-12 col-12 mt-4 ">
+                                    <select class="form-control select2-people" name="people">
+                                        <option value="" disabled selected>Select number of people</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-12 col-12 mt-4 flex justify-center">
+                                    <div class="btn btn-warning w-100 flex justify-center text-2xl rounded-2xl">
+                                        Book a Table
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <img src="{{asset('assets/media/home/bn-img-6.png')}}" class="offer-absolute" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="pt-[120px] pb-[120px]" data-aos="fade-bottom">
+    <div class="container mx-auto">
+        <div class="flex flex-col items-center gap-2 aos-init aos-animate" data-aos="fade-bottom">
+            <p class="text-orange flex gap-1 items-center">
+                <span class="material-symbols-outlined">
+                    room_service
+                </span>
+                Delicious Menu
+            </p>
+
+            <p class="text-color text-6xl font-[800] uppercase leading-[60px] mb-4">
+                Explore Our Delicious
+            </p>
+
+            <p class="text-color text-5xl font-[800] uppercase leading-[60px] mb-4">
+                Menu
+            </p>
+
+
+            <div class="row items-center mt-8">
+                <div class="col-md-6 col-12" data-aos="fade-top">
+                    <div class="menu-box">
+                        <img src="{{asset('assets/media/home/menu-thumb1.png')}}" alt="">
+
+                        <div class="flex flex-col gap-2">
+                            <div class="menu-title font-bold text-2xl">Truffle Mac and Cheese</div>
+                            <div class="menu-para font-normal font-hanken">Indulgent mac and cheese with truffle essence.</div>
+                        </div>
+
+                        <h4 class="text-red text-2xl font-semibold text-semibold menu-price">$24</h4>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-12" data-aos="fade-top">
+                    <div class="menu-box">
+                        <img src="{{asset('assets/media/home/menu-thumb2.png')}}" alt="">
+
+                        <div class="flex flex-col gap-2">
+                            <div class="menu-title font-bold text-2xl">Grilled Ribeye Steak</div>
+                            <div class="menu-para font-normal font-hanken">Perfectly grilled ribeye steak with savory seasoning.</div>
+                        </div>
+
+                        <h4 class="text-red text-2xl font-semibold text-semibold menu-price">$24</h4>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-12 mt-8" data-aos="fade-top">
+                    <div class="menu-box">
+                        <img src="{{asset('assets/media/home/menu-thumb3.png')}}" alt="">
+
+                        <div class="flex flex-col gap-2">
+                            <div class="menu-title font-bold text-2xl">Honey-Glazed Salmon</div>
+                            <div class="menu-para font-normal font-hanken">Sweet and savory honey-glazed salmon fillet.</div>
+                        </div>
+
+                        <h4 class="text-red text-2xl font-semibold text-semibold menu-price">$24</h4>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-12 mt-8" data-aos="fade-top">
+                    <div class="menu-box">
+                        <img src="{{asset('assets/media/home/menu-thumb4.png')}}" alt="">
+
+                        <div class="flex flex-col gap-2">
+                            <div class="menu-title font-bold text-2xl">Thai Coconut Curry</div>
+                            <div class="menu-para font-normal font-hanken">Fragrant Thai coconut curry with vibrant vegetables.</div>
+                        </div>
+
+                        <h4 class="text-red text-2xl font-semibold text-semibold menu-price">$24</h4>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-12 mt-8" data-aos="fade-top">
+                    <div class="menu-box">
+                        <img src="{{asset('assets/media/home/menu-thumb5.png')}}" alt="">
+
+                        <div class="flex flex-col gap-2">
+                            <div class="menu-title font-bold text-2xl">Gourmet Mushroom Risotto</div>
+                            <div class="menu-para font-normal font-hanken">Rich, creamy risotto with gourmet mushrooms</div>
+                        </div>
+
+                        <h4 class="text-red text-2xl font-semibold text-semibold menu-price">$24</h4>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-12 mt-8" data-aos="fade-top">
+                    <div class="menu-box">
+                        <img src="{{asset('assets/media/home/menu-thumb6.png')}}" alt="">
+
+                        <div class="flex flex-col gap-2">
+                            <div class="menu-title font-bold text-2xl">Margarita Shrimp Tacos</div>
+                            <div class="menu-para font-normal font-hanken">Zesty shrimp tacos with fresh margarita flavor.</div>
+                        </div>
+
+                        <h4 class="text-red text-2xl font-semibold text-semibold menu-price">$24</h4>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-12 mt-8" data-aos="fade-top">
+                    <div class="menu-box">
+                        <img src="{{asset('assets/media/home/menu-thumb5.png')}}" alt="">
+
+                        <div class="flex flex-col gap-2">
+                            <div class="menu-title font-bold text-2xl">BBQ Bacon Burger</div>
+                            <div class="menu-para font-normal font-hanken">Juicy burger topped with BBQ sauce and bacon.</div>
+                        </div>
+
+                        <h4 class="text-red text-2xl font-semibold text-semibold menu-price">$24</h4>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-12 mt-8" data-aos="fade-top">
+                    <div class="menu-box">
+                        <img src="{{asset('assets/media/home/menu-thumb6.png')}}" alt="">
+
+                        <div class="flex flex-col gap-2">
+                            <div class="menu-title font-bold text-2xl">Spicy Tuna Roll</div>
+                            <div class="menu-para font-normal font-hanken">Spicy tuna roll with a bold, flavorful kick.</div>
+                        </div>
+
+                        <h4 class="text-red font-4xl font-semibold font-hanken menu-price">$24</h4>
+                    </div>
                 </div>
             </div>
         </div>

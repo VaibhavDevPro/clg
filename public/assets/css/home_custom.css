@@ -96,12 +96,20 @@ body {
     color: var(--white-color);
 }
 
+
+.btn-warning:hover,
+.btn-warning:focus,
+.btn-warning:active {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--white-color);
+}
 /* General Transition Effect for Hover, Focus, Active */
 .btn {
     cursor: pointer;
-    padding: 10px 36px;
+    padding: 12px 36px;
     font-size: 20px;
-    border-radius: 4px;
+    border-radius: 8px;
     transition: all 0.3s ease;
     font-weight: 600;
 }
@@ -409,3 +417,139 @@ body {
     top: 0;
     right: 0;
 }
+
+.best-choose-box{
+    background-color: #f2f2f2;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    border-radius: 24px;
+    flex-direction: column;
+    gap: 16px;
+    cursor: pointer;
+    padding: 24px 24px;
+}
+
+.best-choose-box:hover{
+    background-color: var(--primary-color);
+    transition: 0.5s ease-in-out;
+}
+
+.best-choose-box:hover .choose-icon{
+    color: var(--white-color);
+    transition: .2sec ease-in-out;
+}
+
+.best-choose-box:hover .choose-title{
+    color: var(--white-color);
+    transition: .2sec ease-in-out;
+}
+
+.best-choose-box:hover .choose-para{
+    color: var(--gray-color);
+    transition: .2sec ease-in-out;
+}
+
+.best-choose-box .choose-icon{
+    text-align: center;
+    font-size: 62px;
+    color: var(--text-color);
+}
+
+.form-control{
+    padding: 16px 24px;
+    border-radius: 16px;
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+.form-control::placeholder{
+    color: var(--text-color-secondary);
+}
+.call-form{
+    background-color: var(--secondary-color);
+    border-radius: 24px;
+    padding: 24px;
+    z-index: 1;
+}
+.call-form .select2-container .select2-selection--single{
+    height: 58px;
+    border-radius: 16px;
+    font-size: 20px;
+}
+
+.call-form .select2-container--default .select2-selection--single .select2-selection__placeholder{
+    font-size: 20px;
+    color: var(--text-color-secondary);
+}
+
+.call-form .select2-container--default .select2-selection--single .select2-selection__rendered{
+    color: var(--text-color-secondary);
+    line-height: 46px;
+    padding: 4px 24px;
+}
+
+.call-form .select2-container--default .select2-selection--single .select2-selection__arrow{
+    color: var(--text-color-secondary);
+    padding: 4px 24px;
+    height: 56px;
+}
+
+.call-form .call-from-icon{
+    color: var(--primary-color);
+    position: absolute;
+    top: 16px;
+    left: 24px;
+    z-index: 9999;
+}
+
+.has-icon-left{
+    padding: 16px 24px 16px 42px;
+}
+
+.has-icon-btn{
+    padding: 12px 36px 12px 48px;
+    position: relative;
+}
+
+.has-icon-btn .material-symbols-outlined{
+    position: absolute;
+    left: 14px;
+    bottom: 14px;
+}
+
+.select2-results__option{
+    padding: 12px 16px;
+}
+
+.menu-box{
+    background: #f2f2f2;
+    border: 1px dashed #ebebeb;
+    padding: 26px 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    cursor: pointer;
+    border-radius: 16px;
+}
+
+.menu-box:hover{
+    background-color: var(--primary-color);
+    transition: 0.5s ease-in-out;
+}
+
+.menu-box:hover .menu-title{
+    color: var(--white-color);
+    transition: .2sec ease-in-out;
+}
+
+.menu-box:hover .menu-para{
+    color: var(--gray-color);
+    transition: .2sec ease-in-out;
+}
+
+.menu-box:hover .menu-price{
+    color: var(--white-color);
+    transition: .2sec ease-in-out;
+}
+
