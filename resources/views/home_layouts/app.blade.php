@@ -6,10 +6,12 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="description" content="fast food, burger, pizza">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" type="image/x-icon" href="{{asset('assets/media/home/favi.svg')}}">
     <!--====== Title ======-->
     <title>Foodix - Fast Foods & Restaurants HTML Template</title>
     {{-- <link href="/dist/main.css" rel="stylesheet"> --}}
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     @vite('resources/css/app.css')
     <link rel="stylesheet"
@@ -25,7 +27,6 @@
 
     @stack('home_scripts')
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </body>
 
 </html>

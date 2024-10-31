@@ -2,6 +2,7 @@
 
 body {
     font-family: "Barlow Condensed", serif;
+    overflow-x: hidden;
 }
 
 .font-mulish {
@@ -392,4 +393,19 @@ body {
 
 .style-four:hover .content span{
     color: var(--gray-light-color);
+}
+
+.offer{
+    background-image: url('../media/home/offer-bg1.jpg');
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    padding: 120px 0;
+}
+.offer-absolute{
+    position: absolute;
+    position: absolute;
+    width: 140px;
+    top: 0;
+    right: 0;
 }
